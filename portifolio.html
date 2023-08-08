@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon"
+    href="https://download.seaicons.com/download/i93902/graphicloads/seo-services/graphicloads-seo-services-services-portfolio.ico"
+    type="image/x-icon">
+  <link rel="stylesheet" href="estilos/portifolio.css">
+  <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js"
+    crossorigin="anonymous"></script>
+  <script type="importmap">
+  {
+    "imports": {
+      "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+      "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.esm.min.js"
+    }
+  }
+  </script>
+  <script type="module" src="./roteiros/index.js"></script>
+  <title>Porta-fólio</title>
+</head>
+
+<body>
+  <div class="imgbg desprint">
+    <div></div>
+  </div>
+
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#portfolio">
+        <img class="icone" src="https://icons.getbootstrap.com/assets/icons/journal-code.svg" alt="Porta-fólio"
+          width="30" height="24">
+        Porta-fólio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-md-1" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Endereços
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis"
+                  href="https://github.com/ValerioHasman/"><i class="bi bi-github"></i> GitHub</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" target="_blank"
+                  href="https://www.linkedin.com/in/valerio-hasman/">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <i class="bi bi-linkedin"></i> LinkdIn
+                    </div>
+                    <div class="col-auto">
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </div>
+                  </div>
+                </a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-md-1" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-filetype-js"></i> Projetos
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#MenuDeContexto"><i class="bi bi-menu-button-wide"></i> Menu De Contexto</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#TransicaoGradienteLinear"><i class="bi bi-palette2"></i> Transição de Gradiente Linear</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#AdmResponsavel"><i class="bi bi-people"></i> Adm Responsavel</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="d-flex navbar-nav">
+          <div class="nav-item dropdown d-grid gap-2">
+            <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-md-1"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i class="bi bi-brightness-high-fill"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item bg-grad-nav rounded" href="#"><i class="bi bi-brightness-high-fill"></i>
+                  Light</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded" href="#"><i class="bi bi-moon-stars-fill"></i> Dark</a>
+              </li>
+              <li>
+                <a class="dropdown-item bg-grad-nav rounded" href="#">
+                  <div class="row justify-content-between">
+                    <div class="col-auto">
+                      <i class="bi bi-circle-half"></i> Auto
+                    </div>
+                    <div class="col-auto">
+                      <i class="bi bi-check"></i>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="root"></div>
+</body>
+
+</html>

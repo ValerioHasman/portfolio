@@ -12,9 +12,12 @@
     href="https://download.seaicons.com/download/i93902/graphicloads/seo-services/graphicloads-seo-services-services-portfolio.ico"
     type="image/x-icon">
   <link rel="stylesheet" href="https://valeriohasman.github.io/MenuContexto/estilosProjetos.css">
-  <link rel="stylesheet" href="https://valeriohasman.github.io/portfolio/portifolio.css">
+  <link rel="stylesheet" href="./estilos/portifolio.css">
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.js"></script>
   <script defer src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
+  <script type="module">
+    window.location.replace("https://valeriohasman.github.io/portfolio/portifolio.html");
+  </script>
 
   <title>Porta-fólio</title>
 </head>
@@ -143,11 +146,11 @@
     </nav>
   </header>
 
-  <div class="container-xxl mb-5">
-    <div class="altura d-flex align-items-center mt-5">
-      <div>
+  <div class="container-xxl">
+    <div class="altura d-flex align-items-center row">
+      <div class="col-12 col-md-9 col-lg-8 balance">
         <h1>Olá, sou o Valério</h1>
-        <h2 class="py-5">Desenvolvedor <span lang="en" class="fst-italic">Full Stack</span> Júnior</h2>
+        <h2 class="py-5">Desenvolvedor <span lang="en" class="fst-italic">Full Stack</span></h2>
         <p>Preferencialmente um desenvolvedor web, formado em Análise e Desenvolvimento Sistemas e Técnico em
           Informática.</p>
         <p>A área da tecnologia foi a que mais me chamou a atenção e pretendo seguir carreira como programador.</p>
@@ -156,11 +159,14 @@
           projetos do tipo <span lang="en" class="fst-italic">Server Side</span>.</p>
       </div>
     </div>
-    <div class="altura d-flex align-items-center">
+    <div class="d-flex align-items-center">
       <div>
         <h2 class="py-5">Projetos <span lang="en" class="fst-italic">Server Side</span></h2>
-        <div class="container-xxl bg-grad-nav rounded-3 py-5 my-5">
+        <div class="container-xxl alturaProjetos d-flex align-items-center">
           <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>Gerenciador</h3>
+            </div>
             <div class="col-md-7 col-12 p-2">
               <div id="carouselUm" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
                 <div class="carousel-inner rounded-3 border border-secondary-subtle">
@@ -179,16 +185,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5 col-12 p-2">
+            <div class="col-md-5 col-12 p-2 balance">
               <p>Gerenciador <img src="https://raw.githubusercontent.com/ValerioHasman/Gerenciador/main/midias/ICONE.ico" alt="" class="emojiIco" /> é um projeto PHP com MySql do lado servidor e JS, CSS, Bootstrep e HTML para o lado do cliente, usando uma estrutura MVC <span lang="en" class="fst-italic">(Model–view–controller)</span>, Tendo sido um teste (prova) para LiaX Tecnologia da Informação de Lorena/SP.</p>
               <p>O projeto tem ideia de de auxiliar na gestão da imunização do nosso país, considerando a esfera nacional.</p>
               <a href="https://github.com/ValerioHasman/Gerenciador" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
         </div>
-        <div class="container-xxl bg-grad-nav rounded-3 py-5 my-5">
+        <div class="container-xxl alturaProjetos d-flex align-items-center">
           <div class="row justify-content-between">
-            <div class="col-md-5 col-12 p-2 text-end">
+            <div class="col-12">
+              <h3>SIB</h3>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance text-end">
               <p>SIB <img src="https://raw.githubusercontent.com/ValerioHasman/SIB/main/midias/ICONE.ico" alt="" class="emojiIco" /> é um projeto PHP com MySql do lado servidor e JS, DataTable, CSS, Bootstrep e HTML para o lado do cliente, usando uma estrutura MVC <span lang="en" class="fst-italic">(Model–view–controller)</span>, Tendo sido um teste (prova) para Central dos Benefícios de Nova Lima/MG</p>
               <p>O projeto consiste em gerenciar usuários de um sistema</p>
               <a href="https://github.com/ValerioHasman/SIB" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
@@ -210,8 +219,11 @@
             </div>
           </div>
         </div>
-        <div class="container-xxl bg-grad-nav rounded-3 py-5 my-5">
+        <div class="container-xxl alturaProjetos d-flex align-items-center">
           <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>Costs</h3>
+            </div>
             <div class="col-md-7 col-12 p-2">
               <div id="carouselTres" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
                 <div class="carousel-inner rounded-3 border border-secondary-subtle">
@@ -227,16 +239,19 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-5 col-12 p-2">
+            <div class="col-md-5 col-12 p-2 balance">
               <p>Costs <img src="https://raw.githubusercontent.com/ValerioHasman/costsReact/main/src/img/logoreact.png" alt="" class="emojiIco" /> é um projeto em React.js usando componentes para sua construção, proveniente de um curso on-line.</p>
               <p>Um projeto que gerencia projetos e seus custos.</p>
               <a href="https://github.com/ValerioHasman/costsReact" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
             </div>
           </div>
         </div>
-        <div class="container-xxl bg-grad-nav rounded-3 py-5 my-5">
+        <div class="container-xxl alturaProjetos d-flex align-items-center">
           <div class="row justify-content-between">
-            <div class="col-md-5 col-12 p-2 text-end">
+            <div class="col-12">
+              <h3>Afazeres</h3>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance text-end">
               <p>Afazeres <img src="https://raw.githubusercontent.com/ValerioHasman/Afazeres/main/src/logo.svg" alt="" class="emojiIco" /> é um projeto em React.js usando componentes para sua construção, proveniente de um curso on-line.</p>
               <p>Projeto para anotar tarefas a serem cumpridas, marcando o que já foi feito e o que falta ser feito</p>
               <a href="https://github.com/ValerioHasman/Afazeres" target="_blank"><i class="bi bi-box-arrow-up-right"></i></a>
