@@ -4,8 +4,8 @@ export default function Portifolio(){
 
   const elemento = document.createElement('div');
   elemento.classList.add('container-xxl');
-//https://valeriohasman.github.io/portfolio/Porta-Fólio.html
-  fetch('http://localhost/PortaFolio/Porta-F%c3%b3lio.html',{
+
+  fetch('https://valeriohasman.github.io/portfolio/Porta-Fólio.html',{
     method: 'GET',
   }).then(resp => resp.text())
   .then((data) => {
@@ -17,7 +17,7 @@ export default function Portifolio(){
     }
     
   }).catch(err=>{
-    console.log(err);
+    console.error(err);
   });
 
   return elemento;
