@@ -1,9 +1,0 @@
-.altura {
-  min-height: 70vh;
-  /* border: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important; */
-}
-
-.emojiIco{
-  width: var(--bs-body-font-size);
-  height: var(--bs-body-font-size);
-}

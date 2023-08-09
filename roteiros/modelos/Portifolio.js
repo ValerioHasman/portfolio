@@ -11,11 +11,9 @@ export default function Portifolio(){
   .then((data) => {
     elemento.innerHTML = data;
     elemento.innerHTML = elemento.querySelector(".container-xxl").innerHTML;
-
     for (const carousel of elemento.querySelectorAll('[data-bs-ride="carousel"]')) {
       bootstrap.Carousel.getOrCreateInstance(carousel);
     }
-    
   }).catch(err=>{
     console.error(err);
   });

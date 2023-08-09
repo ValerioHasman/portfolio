@@ -11,6 +11,8 @@ export default class Rotas{
 
   irPara(url){
     let destino = url.split('#')[1];
+
+    //window[destino]();
     switch(destino){
       case 'MenuDeContexto':
         if(this.#rota[destino] === undefined){
@@ -28,7 +30,10 @@ export default class Rotas{
         }
         break;
       default:
-        this.#rota[destino] = Portifolio();
+        destino = 'portfolio';
+        if(this.#rota[destino] === undefined){
+          this.#rota[destino] = Portifolio();
+        }
         break;
     }
     return this.#rota[destino];
