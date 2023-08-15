@@ -29,9 +29,8 @@ export default function TransicaoGradienteLinear(){
     .then((data) => {
       const script = document.createElement('script');
       script.innerHTML = data;
-  
       elemento.insertAdjacentElement('beforeend', script);
-      
+      elemento.insertAdjacentHTML('beforeend', `<div class="py-5 my-4"></div>`);
     }).catch(err=>{
       console.error(err);
     }).finally(()=>{

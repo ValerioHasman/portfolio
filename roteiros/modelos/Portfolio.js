@@ -1,6 +1,6 @@
 import * as bootstrap from 'bootstrap';
 
-export default function Portifolio(){
+export default function Portfolio(){
 
   const elemento = document.createElement('div');
   elemento.classList.add('container-xxl');
@@ -14,6 +14,7 @@ export default function Portifolio(){
     for (const carousel of elemento.querySelectorAll('[data-bs-ride="carousel"]')) {
       bootstrap.Carousel.getOrCreateInstance(carousel);
     }
+    elemento.insertAdjacentHTML('beforeend', `<div class="py-5 my-4"></div>`);
   }).catch(err=>{
     console.error(err);
   });
