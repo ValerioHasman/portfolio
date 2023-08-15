@@ -8,7 +8,7 @@ import Tabela2 from './modelos/Tabela2.js';
 export default function AdmRoot(elemento){
   
   if(!(elemento instanceof Element)){
-    console.log('erro');
+    console.error('erro');
   };
   
   const txtjson = elemento.querySelector('#json');

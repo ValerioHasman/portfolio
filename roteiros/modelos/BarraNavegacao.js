@@ -4,8 +4,6 @@ export default class BarraNavegacao{
   
   #barra;
   #rootnav;
-  #getTemaArmazem = () => localStorage.getItem('theme');
-  #setTemaArmazem = theme => localStorage.setItem('theme', theme);
 
   constructor(){
     this.#barra = document.createElement('div');
@@ -76,8 +74,6 @@ export default class BarraNavegacao{
 
     Temas(this.#barra);
 
-    //this.#setTemaVerifica(this.temaPreferido());
-    //this.#startSetTema();
   }
   
   set rootnav(valor){
@@ -95,67 +91,6 @@ export default class BarraNavegacao{
 
   get barra(){
     return this.#barra;
-  }
-
-  #startSetTema = () => {
-    this.#botoesAtivar(this.temaPreferido());
-    this.#barra.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value');
-          this.#setTemaArmazem(theme);
-          this.#setTemaVerifica(theme);
-          this.#botoesAtivar(theme, true);
-        })
-      })
-  }
-
-  #setTemaVerifica = theme => {
-    if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.documentElement.setAttribute('data-bs-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-bs-theme', theme);
-    }
-  }
-
-  #botoesAtivar = (theme, foco = false) => {
-
-    const dropdown = this.#barra.querySelector('#tema');
-
-    this.#barra.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active');
-      element.setAttribute('aria-pressed', 'false');
-    })
-
-    const btnToActive = this.#barra.querySelector(`[data-bs-theme-value="${theme}"]`);
-    btnToActive.classList.add('active');
-    btnToActive.setAttribute('aria-pressed', 'true');
-
-    const button = dropdown.querySelector(`button`);
-
-    if (foco) {
-      button.focus();
-    }
-
-    switch(theme){
-      case 'dark':
-        button.innerHTML = '<i class="bi me-2 bi-moon-stars-fill"></i>';
-        break;
-      case 'light':
-        button.innerHTML = '<i class="bi me-2 bi-sun-fill"></i>';
-        break;
-      default:
-        button.innerHTML = '<i class="bi me-2 bi-circle-half"></i>';
-        break;
-    }
-  }
-
-  temaPreferido(){
-    const tema = this.#getTemaArmazem();
-    if (tema) {
-      return tema;
-    }
-
   }
 
 }

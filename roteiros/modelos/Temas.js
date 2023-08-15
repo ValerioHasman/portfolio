@@ -16,7 +16,7 @@ export default function Temas(elemento){
       })
   }
 
-  const setTemaVerifica = theme => {
+  const setTemaVerifica = (theme) => {
     if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.setAttribute('data-bs-theme', 'dark');
     } else {
@@ -34,8 +34,10 @@ export default function Temas(elemento){
     })
 
     const btnToActive = elemento.querySelector(`[data-bs-theme-value="${theme}"]`);
-    btnToActive.classList.add('active');
-    btnToActive.setAttribute('aria-pressed', 'true');
+    if(btnToActive){
+      btnToActive.classList.add('active');
+      btnToActive.setAttribute('aria-pressed', 'true');
+    }
 
     const button = dropdown.querySelector(`button`);
 
@@ -61,7 +63,7 @@ export default function Temas(elemento){
     if (tema) {
       return tema;
     }
-
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   setTemaVerifica(temaPreferido());
