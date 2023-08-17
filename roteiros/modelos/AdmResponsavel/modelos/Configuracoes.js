@@ -26,12 +26,10 @@ export default class Configuracoes{
   get tela(){
     return this.#tela;
   }
-  get tela(){
-    return this.#tela;
-  }
 
   #isSetlocalStorage = () => {
     this.armazenamento ??= 'localStorage';
+    this.#api.servidor = this.armazenamento;
   }
 
   #formularioNode = () => {
@@ -63,6 +61,8 @@ export default class Configuracoes{
     this.#formulario = form;
 
     const input = this.#formulario.querySelector('input')
+
+    input.value = this.armazenamento;
 
     this.#formulario.onsubmit = (e) => {
       e.preventDefault();
