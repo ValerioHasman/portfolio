@@ -30,8 +30,16 @@ export default class Modais{
     this.#titulo = String(valor);
   }
   set mensagem(valor){
-    this.#modal.querySelector('.modal-body').innerHTML = valor;
     this.#mensagem = String(valor);
+
+    const msg = this.#modal.querySelector('.modal-body');
+
+    if(valor instanceof Element){
+      msg.innerHTML = '';
+      msg.insertAdjacentElement('beforeend', valor);
+    } else {
+      msg.innerHTML = valor;
+    }
   }
   set funcaoAoFechar(valor){
     if(typeof Function() != typeof valor){

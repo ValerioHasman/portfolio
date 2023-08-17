@@ -1,4 +1,5 @@
 import APIs from './modelos/APIs.js';
+import Configuracoes from './modelos/Configuracoes.js';
 import FerramentaDica from './modelos/FerramentaDica.js';
 import Formulario from './modelos/Formulario.js';
 import Modais from './modelos/Modais.js';
@@ -14,8 +15,11 @@ export default function AdmRoot(elemento){
   const txtjson = elemento.querySelector('#json');
   const tabela = elemento.querySelector('#tabela');
   const tb = new Tabela2(tabela, txtjson);
+  const api = new APIs();
+  const confgs = new Configuracoes(api);
 
   elemento.querySelector('#voltar').onclick = voltar;
+  elemento.querySelector('#configuracao').onclick = configuracao;
   elemento.querySelector('#ler').onclick = ler;
   elemento.querySelector('#gravarObj').onclick = gravarObj;
   elemento.querySelector('#formulario').onsubmit = submitForm;
@@ -30,11 +34,11 @@ export default function AdmRoot(elemento){
   }
 
   function ler(){
-    APIs.ler(this, tb);
+    api.ler(this, tb);
   }
 
   function gravarObj(){
-    APIs.gravarObj(this, tb);
+    api.gravarObj(this, tb);
   }
 
   function submitForm(e){
@@ -60,6 +64,10 @@ export default function AdmRoot(elemento){
     } catch (err) {
       new Modais('<i class="bi bi-exclamation-octagon"></i> Nome inválido', err.message, focar).exibe();
     }
+  }
+
+  function configuracao(){
+    confgs.tela.exibe();
   }
 
 }
