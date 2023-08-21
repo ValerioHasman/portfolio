@@ -38,6 +38,8 @@
     texto = texto.replaceAll('\\n', '\n&nbsp&nbsp');
     texto = texto.replaceAll('<', '&lt;');
     texto = texto.replaceAll('>', '&gt;');
+    texto = texto.replaceAll('\\"', '&quot;');
+    texto = texto.replaceAll("\\'", '&apos;');
 
     return `${texto}`;
   }
