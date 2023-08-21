@@ -13,19 +13,33 @@
     }
 
     const err = {
+      erros: {
+        message: e.error.message,
+        stack: e.error.stack
+      },
       filename: e.filename,
       lineno: e.lineno,
       colno: e.colno,
       message: e.message
     }
 
-    elementos.pre.innerHTML += JSON.stringify(err, 0, 2) + "\n\n";
+    elementos.pre.innerHTML += tratarEscapes(JSON.stringify(err, 0, 2)) + "\n\n";
   }
 
   function printe(){
     window.addEventListener('load', ()=>{
       document.body.insertAdjacentElement('beforeend', elementos.pre);
     })
+  }
+
+  function tratarEscapes(texto){
+    texto = String(texto);
+
+    texto = texto.replaceAll('\\n', '\n&nbsp&nbsp');
+    texto = texto.replaceAll('<', '&lt;');
+    texto = texto.replaceAll('>', '&gt;');
+
+    return `${texto}`;
   }
 
   function preElem(){
