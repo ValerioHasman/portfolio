@@ -34,12 +34,16 @@
 
   function tratarEscapes(texto){
     texto = String(texto);
+    let textoR = texto;
 
-    texto = texto.replaceAll('\\n', '\n&nbsp&nbsp');
-    texto = texto.replaceAll('<', '&lt;');
-    texto = texto.replaceAll('>', '&gt;');
-    texto = texto.replaceAll('\\"', '&quot;');
-    texto = texto.replaceAll("\\'", '&apos;');
+    do{
+      textoR = texto;
+      texto = texto.replace('\\n', '\n&nbsp&nbsp');
+      texto = texto.replace('<', '&lt;');
+      texto = texto.replace('>', '&gt;');
+      texto = texto.replace('\\"', '&quot;');
+      texto = texto.replace("\\'", '&apos;');
+    } while(texto != textoR)
 
     return `${texto}`;
   }
