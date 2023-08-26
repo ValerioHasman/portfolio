@@ -5,6 +5,7 @@ export default class Pessoa {
    * Não pode ter mais de um espaço entre palavras;
    * Não pode conter mais que três letras iguais consecutivas; X
    * A primeira parte do nome deve ter pelo menos 3 caracteres;
+   * O nome não pode ter mais que oitenta caracteres.
    */
 
   #nome = String();
@@ -35,6 +36,9 @@ export default class Pessoa {
   nomeTemTamanho(nome){
     if(nome.length < 3){
       throw new Error('O nome não pode ter menos que três letras.');
+    }
+    if(nome.length > 80){
+      throw new Error('O nome não pode ter mais que oitenta caracteres.');
     }
   }
 

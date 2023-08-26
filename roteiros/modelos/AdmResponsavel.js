@@ -29,11 +29,17 @@ export default function AdmResponsavel(){
     </div>
   </div>  
   <form id="formulario" class="row mt-2">
-    <div class="px-2 col-auto"><label class="col-form-label" for="nomeNovo">Nome:</label></div>
-    <div class="px-2 col col-md-8 col-lg-5">
-      <input required class="form-control" type="text" id="nomeNovo" />
+    <div class="px-2 col-auto">
+      <label class="col-form-label" for="nomeNovo">Nome:</label>
     </div>
-    <div class="px-2 col-auto"><button class="btn btn-primary bg-gradient px-sm-5" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Inserir responsável"><i class="bi bi-plus-lg"></i></button></div>
+    <div class="px-2 col col-md-8 col-lg-5">
+      <input required class="form-control" type="text" id="nomeNovo" autocomplete="off" maxlength="80"/>
+    </div>
+    <div class="px-2 col-auto">
+      <button class="btn btn-primary bg-gradient px-sm-5" type="submit" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Inserir responsável">
+        <i class="bi bi-plus-lg"></i>
+      </button>
+    </div>
   </form>
 </div>
 <div class="container-fluid">
