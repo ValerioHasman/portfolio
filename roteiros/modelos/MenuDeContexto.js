@@ -1,5 +1,3 @@
-import * as bootstrap from 'bootstrap';
-
 export default function MenuDeContexto(){
 
   const elemento = document.createElement('div');

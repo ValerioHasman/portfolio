@@ -1,4 +1,3 @@
-import * as bootstrap from 'bootstrap'
 import Rotas from "./modelos/Rotas.js";
 import Root from "./modelos/Root.js";
 

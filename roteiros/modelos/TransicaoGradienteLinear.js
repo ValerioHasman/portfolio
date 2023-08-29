@@ -1,5 +1,3 @@
-import * as bootstrap from 'bootstrap';
-
 export default function TransicaoGradienteLinear(){
 
   const elemento = document.createElement('div');
