@@ -5,7 +5,9 @@ export default class APIs {
   #servidor;
 
   constructor(){
-    localStorage.getItem("APIs") ?? localStorage.setItem("APIs", `{"pessoas":[{"nome":"Fernado Berg Taylor","filhos":["Mariana Berg Taylor"]},{"nome":"Maria Fernandez Bray","filhos":["Pedro Fernandez Bray"]},{"nome":"Pedro Holland Schroeder","filhos":["Carlos Holland Schroeder","Regina Holland Schroeder"]},{"nome":"Camila Pierce Cline","filhos":["João Pierce Cline","Ana Pierce Cline"]}]}`);
+    if(!localStorage.getItem("APIs")){
+      localStorage.setItem("APIs", `{"pessoas":[{"nome":"Fernado Berg Taylor","filhos":["Mariana Berg Taylor"]},{"nome":"Maria Fernandez Bray","filhos":["Pedro Fernandez Bray"]},{"nome":"Pedro Holland Schroeder","filhos":["Carlos Holland Schroeder","Regina Holland Schroeder"]},{"nome":"Camila Pierce Cline","filhos":["João Pierce Cline","Ana Pierce Cline"]}]}`);
+    }
   };
 
   set servidor(valor) {

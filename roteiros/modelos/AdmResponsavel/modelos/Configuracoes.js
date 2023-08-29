@@ -28,7 +28,9 @@ export default class Configuracoes{
   }
 
   #isSetlocalStorage = () => {
-    this.armazenamento ??= 'localStorage';
+    if(!this.armazenamento){
+      this.armazenamento = 'localStorage';
+    }
     this.#api.servidor = this.armazenamento;
   }
 
