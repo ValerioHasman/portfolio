@@ -1,3 +1,5 @@
+import Botoes from "./Botoes.js";
+
 export default class Formulario {
   #formulario = Object();
   #target = Array();
@@ -9,9 +11,15 @@ export default class Formulario {
   }
 
   set formulario (valor){
-    if (valor.target.tagName == 'FORM'){
-      this.#formulario = Object(valor);
-      this.#target = valor.target;
+    if (valor.target.tagName == 'FORM' && valor.target instanceof Element){
+      this.#formulario = valor;
+      Object.keys(valor.target).forEach((item)=>{
+        if(valor.target[item].tagName == 'BUTTON'){
+          this.#target.push(new Botoes(valor.target[item]));
+        } else {
+          this.#target.push(valor.target[item]);
+        }
+      });
     } else {
       throw new TypeError('Tipo esperado FORM, de um submit!');
     }
@@ -37,5 +45,4 @@ export default class Formulario {
   get target(){
     return this.#target;
   }
-
 }

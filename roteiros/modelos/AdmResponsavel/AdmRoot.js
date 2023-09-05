@@ -30,7 +30,12 @@ export default function AdmRoot(elemento){
   FerramentaDica.carregarDicas(elemento);
 
   function voltar(){
-    history.go(-1);
+    if(history.length > 1){
+      history.go(-1);
+      history.go(+1);
+    } else {
+      window.location.href = window.location.origin + window.location.pathname + '#Portfolio';
+    }
   }
 
   function ler(){

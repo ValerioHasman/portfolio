@@ -3,6 +3,7 @@ import MenuDeContexto from "./MenuDeContexto.js";
 import TransicaoGradienteLinear from "./TransicaoGradienteLinear.js";
 import AdmResponsavel from "./AdmResponsavel.js";
 import BarraNavegacao from "./BarraNavegacao.js";
+import ProcessamentoDeDados from "./ProcessamentoDeDados.js";
 
 export default class Rotas{
 
@@ -45,6 +46,11 @@ export default class Rotas{
           this.#rota[destino] = AdmResponsavel();
         }
         return this.#rota[destino];
+      case 'ProcessamentoDeDados':
+        if(this.#rota[destino] === undefined){
+          this.#rota[destino] = ProcessamentoDeDados();
+        }
+        return this.#rota[destino];
       default:
         destino = 'Portfolio';
         if(this.#rota[destino] === undefined){
@@ -73,6 +79,11 @@ export default class Rotas{
       case 'AdmResponsavel':
         if(this.#rota[destino] === undefined){
           this.#rota[destino] = AdmResponsavel();
+        }
+        break;
+      case 'ProcessamentoDeDados':
+        if(this.#rota[destino] === undefined){
+          this.#rota[destino] = ProcessamentoDeDados();
         }
         break;
       default:

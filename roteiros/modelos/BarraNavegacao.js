@@ -50,7 +50,8 @@ export default class BarraNavegacao{
             <ul class="dropdown-menu">
               <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#MenuDeContexto"><i class="bi me-2 bi-menu-button-wide"></i>Menu De Contexto</a></li>
               <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#TransicaoGradienteLinear"><i class="bi me-2 bi-palette2"></i>Transição de Gradiente Linear</a></li>
-              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#AdmResponsavel"><i class="bi me-2 bi-people"></i> Adm Responsavel</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#AdmResponsavel"><i class="bi me-2 bi-people"></i>Adm Responsavel</a></li>
+              <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#ProcessamentoDeDados"><i class="bi me-2 bi-table"></i>Processamento De Dados</a></li>
             </ul>
           </li>
         </ul>

@@ -18,10 +18,19 @@ export default class Botoes {
   get botao(){
     return Object(this.#botao);
   }
+
+  set disabled(valor){
+    this.desabilitado = valor;
+  }
+
   set desabilitado(valor){
     this.#desabilitado = Boolean(valor);
     this.botao.disabled = this.desabilitado;
     this.botao.innerHTML = this.desabilitado ? '<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="visually-hidden">Carregando...</span>' : this.texto;
+  }
+
+  get disabled(){
+    return this.desabilitado;
   }
   get desabilitado(){
     return Boolean(this.#desabilitado);
