@@ -6,12 +6,20 @@ export default function Formulario(){
 
   formulario.innerHTML = `
   <div class="row">
-    <label for="formFileExport" class="col-form-label col-12 col-md-auto">Arquivo de exportação:</label>
-    <input class="form-control col" type="file" id="formFileExport">
+    <div class="col-md-auto col-12">
+      <label for="formFileExport" class="col-form-label">Arquivo de exportação:</label>
+    </div>
+    <div class="col">
+      <input class="form-control" type="file" id="formFileExport">
+    </div>
   </div>
   <div class="row mt-3">
-    <label for="formFileImport" class="col-form-label col-12 col-md-auto">Arquivo de importação:</label>
-    <input class="form-control col" type="file" id="formFileImport">
+    <div class="col-md-auto col-12">
+      <label for="formFileImport" class="col-form-label">Arquivo de importação:</label>
+    </div>
+    <div class="col">
+      <input class="form-control" type="file" id="formFileImport">
+    </div>
   </div>
   <div class="col-12 mt-3">
     <button type="submit" class="btn btn-primary bg-gradient">Executar<i class="bi ms-2 bi-caret-right-fill"></i></button>
