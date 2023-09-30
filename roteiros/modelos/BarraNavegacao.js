@@ -8,7 +8,7 @@ export default class BarraNavegacao{
   constructor(){
     this.#barra = document.createElement('div');
     this.#barra.innerHTML = `
-    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary py-1">
     <div class="container-fluid">
       <a class="navbar-brand" href="#Portfolio">
         <img class="icone" src="https://icons.getbootstrap.com/assets/icons/journal-code.svg" alt="Porta-fólio"
