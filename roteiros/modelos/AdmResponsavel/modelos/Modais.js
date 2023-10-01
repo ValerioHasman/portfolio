@@ -95,7 +95,17 @@ export default class Modais{
     modal.setAttribute("tabindex", "-1");
 
     modal.insertAdjacentHTML('beforeend',
-`<div class="modal-dialog modal-dialog-centered">
+`
+<style>
+@media (min-width: 769px) {
+  .modal-dialog-centered-md {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - var(--bs-modal-margin) * 2);
+  }
+}
+</style>
+<div class="modal-dialog modal-dialog-centered-md">
   <div class="modal-content">
     <div class="modal-header">
       <h1 class="modal-title fs-5"></h1>
