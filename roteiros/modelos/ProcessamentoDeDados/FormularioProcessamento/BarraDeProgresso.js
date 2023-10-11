@@ -33,8 +33,8 @@ export default class BarraDeProgresso {
     const div = document.createElement('div');
 
     div.innerHTML = `
-    <div class="progress" role="progressbar" aria-label="Animated striped" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-      <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 0%"></div>
+    <div class="progress" role="progressbar" aria-label="progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress-bar" style="width: 0%"></div>
     </div>
     `;
 

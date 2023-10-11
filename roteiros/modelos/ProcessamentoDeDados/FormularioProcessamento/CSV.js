@@ -4,6 +4,10 @@ export default class CSV extends EventTarget{
 
   csvParaArray(arquivo){
 
+    if(arquivo.constructor !== File){
+      throw new TypeError('Tipo File é esperado');
+    }
+
     const leitor = new FileReader();
 
     leitor.readAsText(arquivo);

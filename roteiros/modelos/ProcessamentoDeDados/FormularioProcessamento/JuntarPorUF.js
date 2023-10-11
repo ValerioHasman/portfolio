@@ -1,18 +1,22 @@
 export default class JuntarPorUF {
 
   #array = Array();
+  #ano;
   
   constructor(exp, imp){
-    this.processa(exp, 'Exp');
-    this.processa(imp, 'Imp');
+    this.#ano = exp[1][0];
+    this.#processa(exp, 'Exp');
+    this.#processa(imp, 'Imp');
   }
 
   get array(){
     return this.#array;
   }
+  get ano(){
+    return this.#ano;
+  }
 
-  processa(arr, tipo){
-    const ano = arr[1][0];
+  #processa = function(arr, tipo){
     for(let i = 1; i < arr.length; i++){
       const uf = arr[i][5];
       const ncm = arr[i][2];
@@ -23,13 +27,13 @@ export default class JuntarPorUF {
         this.#array[uf] = [];
       }
       if(this.#array[uf][ncm] === undefined){
-        this.#array[uf][ncm] = this.objetoBasico(ncm, ano);
+        this.#array[uf][ncm] = this.objetoBasico(ncm);
       }
 
       this.#array[uf][ncm][`${tipo}_${this.pegarMes(mes)}`] += valor;
       this.#array[uf][ncm][`Net_${this.pegarMes(mes)}`] += (tipo == 'Exp' ? valor : -valor);
-      this.#array[uf][ncm][`${tipo}_${ano}`] += valor;
-      this.#array[uf][ncm][`Net_${ano}`] += valor;
+      this.#array[uf][ncm][`${tipo}_${this.#ano}`] += valor;
+      this.#array[uf][ncm][`Net_${this.#ano}`] += valor;
     }
   }
 
@@ -64,7 +68,7 @@ export default class JuntarPorUF {
     }
   }
 
-  objetoBasico(ncm, ano){
+  objetoBasico(ncm){
     const obj = [];
     obj['NCM'] = ncm;
     obj['Exp_jan'] = 0;
@@ -103,9 +107,9 @@ export default class JuntarPorUF {
     obj['Exp_dez'] = 0;
     obj['Imp_dez'] = 0;
     obj['Net_dez'] = 0;
-    obj[`Exp_${ano}`] = 0;
-    obj[`Imp_${ano}`] = 0;
-    obj[`Net_${ano}`] = 0;
+    obj[`Exp_${this.#ano}`] = 0;
+    obj[`Imp_${this.#ano}`] = 0;
+    obj[`Net_${this.#ano}`] = 0;
     return obj;
   }
 

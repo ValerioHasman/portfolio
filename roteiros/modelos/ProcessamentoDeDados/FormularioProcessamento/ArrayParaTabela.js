@@ -1,17 +1,23 @@
+import JuntarPorUF from "./JuntarPorUF.js";
+
 export default class ArrayParaTabela{
 
-  arrtabela;
+  juntadoPorUF;
 
-  constructor(tabela){
+  constructor(juntadoPorUF){
 
-    this.arrtabela = tabela;
+    if (juntadoPorUF.constructor !== JuntarPorUF) {
+      throw new TypeError('Argumento JuntarPorUF é esperado');
+    }
+
+    this.juntadoPorUF = juntadoPorUF;
 
   }
 
   tabelasEmAcondeoes(){
     let strTabela = '';
     
-    Object.keys(this.arrtabela).forEach((uf) => {
+    Object.keys(this.juntadoPorUF.array).forEach((uf) => {
   
       strTabela += `
       <div class="accordion" id="accordionExample">
@@ -78,15 +84,15 @@ export default class ArrayParaTabela{
           <th scope="col">Exp_dez</th>
           <th scope="col">Imp_dez</th>
           <th scope="col">Net_dez</th>
-          <th scope="col">Exp_</th>
-          <th scope="col">Imp_</th>
-          <th scope="col">Net_</th>
+          <th scope="col">Exp_${this.juntadoPorUF.ano}</th>
+          <th scope="col">Imp_${this.juntadoPorUF.ano}</th>
+          <th scope="col">Net_${this.juntadoPorUF.ano}</th>
         </tr>
       </thead>
       <tbody>
     `;
   
-    this.arrtabela[uf].forEach((ncm) => {
+    this.juntadoPorUF.array[uf].forEach((ncm) => {
       htmltabela += `
           <tr>
             <th scope="row">${ncm['NCM']}</th>
@@ -126,9 +132,9 @@ export default class ArrayParaTabela{
             <td>${ncm['Exp_dez']}</td>
             <td>${ncm['Imp_dez']}</td>
             <td>${ncm['Net_dez']}</td>
-            <td>${ncm['Exp_2023']}</td>
-            <td>${ncm['Imp_2023']}</td>
-            <td>${ncm['Net_2023']}</td>
+            <td>${ncm[`Exp_${this.juntadoPorUF.ano}`]}</td>
+            <td>${ncm[`Imp_${this.juntadoPorUF.ano}`]}</td>
+            <td>${ncm[`Net_${this.juntadoPorUF.ano}`]}</td>
           </tr>
     `;
     });

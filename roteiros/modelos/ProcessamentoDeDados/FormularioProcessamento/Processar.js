@@ -1,4 +1,4 @@
-import Formulario from "../AdmResponsavel/modelos/Formulario.js";
+import Formulario from "../../AdmResponsavel/modelos/Formulario.js";
 import CSV from "./CSV.js";
 import DespejoProcessado from "./BarraDeProgresso.js";
 import JuntarPorUF from "./JuntarPorUF.js";
@@ -37,7 +37,7 @@ export default function Processar(elemento, eleResultados){
     formulario.desabilitado = false;
     
     if(exibirTabela){
-      const htmltabela = new ArrayParaTabela(juntado.array);
+      const htmltabela = new ArrayParaTabela(juntado);
       let dados = htmltabela.tabelasEmAcondeoes();
       despejo.valor = 99;
       setTimeout(()=>{
@@ -46,7 +46,7 @@ export default function Processar(elemento, eleResultados){
     }
 
     if(baixarCsv){
-      ArrayParaCsv(juntado.array);
+      ArrayParaCsv(juntado);
     }
 
   };

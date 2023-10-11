@@ -1,10 +1,9 @@
-import Botoes from "../AdmResponsavel/modelos/Botoes.js";
 import Processar from "./Processar.js";
 
-export default function Formulario(){
+export default function FormularioProcessamento(){
 
   const formulario = document.createElement('div');
-  formulario.classList.add("container");
+  formulario.classList.add('container-fluid');
 
   formulario.innerHTML = `
   <form>
@@ -13,7 +12,7 @@ export default function Formulario(){
         <label for="formFileExport" class="col-form-label">Arquivo de exportação:</label>
       </div>
       <div class="col">
-        <input required class="form-control" type="file" id="formFileExport">
+        <input required class="form-control" type="file" accept="text/csv" id="formFileExport">
       </div>
     </div>
     <div class="row mt-3">
@@ -21,7 +20,7 @@ export default function Formulario(){
         <label for="formFileImport" class="col-form-label">Arquivo de importação:</label>
       </div>
       <div class="col">
-        <input required class="form-control" type="file" id="formFileImport">
+        <input required class="form-control" type="file" accept="text/csv" id="formFileImport">
       </div>
     </div>
     <div class="form-check mt-3">
