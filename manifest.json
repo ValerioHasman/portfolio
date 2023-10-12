@@ -1,0 +1,14 @@
+{
+  "name": "Portfólio - Valério",
+  "short_name": "Portfólio",
+  "start_url": "./portifolio.html",
+  "display": "standalone",
+  "background_color": "#446699",
+  "theme_color": "#5577aa",
+  "icons": [
+    {
+      "src": "./imagens/ICONE.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}

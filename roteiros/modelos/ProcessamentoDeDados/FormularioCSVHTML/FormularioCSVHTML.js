@@ -21,7 +21,7 @@ export default function FormularioCSVHTML(){
     <button type="submit" class="btn btn-primary bg-gradient">Executar<i class="bi ms-2 bi-caret-right-fill"></i></button>
   </div>  
 </form>
-<div id="resposta" class="mt-5">
+<div id="resposta" class="mt-5 table-responsive">
 </div>
 `;
 
@@ -34,13 +34,13 @@ export default function FormularioCSVHTML(){
 
     const arquivo = form.target[0].files[0];
 
-    const array = new CSV();
+    const csvarray = new CSV();
 
-    array.csvParaArray(arquivo)
+    csvarray.csvParaArray(arquivo)
     
-    array.addEventListener('load', ()=>{
+    csvarray.addEventListener('load', ()=>{
       form.desabilitado = false;
-      despejo.innerHTML = ArrayParaHTML();
+      despejo.innerHTML = ArrayParaHTML(csvarray);
     });
 
   }

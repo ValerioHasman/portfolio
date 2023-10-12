@@ -1,38 +1,36 @@
-export default function ArrayParaHTML(){
+import CSV from "../FormularioProcessamento/CSV.js";
 
-  return `
-  <p>Em breve! Exemplo:</p>
-<table class="table table-sm table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry the Bird</td>
-      <td>Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-  `;
+export default function ArrayParaHTML(csvarray){
 
+  if(csvarray.constructor !== CSV){
+    throw new TypeError('Tipo CSV é esperado');
+  }
+
+  let tabela = `<table class="table table-sm table-bordered">`;
+
+  csvarray.linhasColunas.forEach((linha, index)=>{
+    if(index !== 0 && index !== 1){
+      tabela += `<tr>`;
+      linha.forEach((valor)=>{
+        tabela += `<td>${valor}</td>`;
+      });
+      tabela += `</tr>`;
+    } else if(index === 1) {
+      tabela += `<tbody><tr>`;
+      linha.forEach((valor)=>{
+        tabela += `<td>${valor}</td>`;
+      });
+      tabela += `</tr>`;
+    } else {
+      tabela += `<thead><tr>`;
+      linha.forEach((valor)=>{
+        tabela += `<th scope="col">${valor}</th>`;
+      });
+      tabela += `</tr></thead>`;
+    }
+  });
+  tabela += `</tbody></table>`;
+
+  return tabela;
 
 }
