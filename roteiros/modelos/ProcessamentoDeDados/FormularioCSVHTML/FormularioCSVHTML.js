@@ -18,7 +18,7 @@ export default function FormularioCSVHTML(){
     </div>
   </div>
   <div class="col-12 mt-3">
-    <button type="submit" class="btn btn-primary bg-gradient">Executar<i class="bi ms-2 bi-caret-right-fill"></i></button>
+    <button type="submit" class="btn btn-primary bg-gradient">Exibir<i class="bi ms-2 bi-caret-right-fill"></i></button>
   </div>  
 </form>
 <div id="resposta" class="mt-5 table-responsive">

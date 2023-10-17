@@ -14,6 +14,7 @@ export default class CSV extends EventTarget{
 
     leitor.onload = ()=>{
       let stringDoArquivo = leitor.result.replaceAll('"','');
+      stringDoArquivo = stringDoArquivo.replaceAll('\r','');
       
       this.#linhasColunas = stringDoArquivo.split("\n");
 

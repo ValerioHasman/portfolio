@@ -79,7 +79,6 @@ class Saida{
       this.#despejo.insertAdjacentElement('beforeend', valor);
     }
 
-    
   }
 
 }
