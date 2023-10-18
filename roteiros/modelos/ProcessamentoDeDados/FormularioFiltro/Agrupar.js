@@ -18,13 +18,15 @@ export default class Agrupar {
     }
   }
 
+  /**
+   * @param {array} arrayl 
+   * @param {*} novo 
+   * @returns 
+   */
   static valorExiste(arrayl, novo){
 
     if (!Array.isArray(arrayl)) {
       throw new TypeError('Esperado um array');
-    }
-    if (typeof novo !== typeof '') {
-      throw new TypeError('Esperado uma string');
     }
 
     let jaTem = false;

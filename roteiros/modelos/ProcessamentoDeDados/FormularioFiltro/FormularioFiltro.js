@@ -45,7 +45,7 @@ export default function FormularioFiltro(){
 
   const despejo = formulario.querySelector('#filtros');
 
-  formulario.onsubmit = (e)=>{
+  formulario.querySelector('form').onsubmit = (e)=>{
     const form = new Formulario(e);
     form.desabilitado = true;
 
@@ -66,7 +66,7 @@ export default function FormularioFiltro(){
 
 
         const opcoes = new OpcoesFiltro();
-
+        despejo.innerHTML = '';
         despejo.appendChild(opcoes.opcoes(arrayCsv.linhasColunas));
       }
       form.desabilitado = false;
