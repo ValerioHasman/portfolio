@@ -2,7 +2,7 @@
 export default class Baixar{
 
   constructor(){
-    throw new Error('Essa é uma classe Abstrata');
+    throw new Error('Não é possível instanciar a classe abstrata Baixar');
   }
 
   /**

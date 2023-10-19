@@ -1,5 +1,4 @@
-import Formulario from "./Formulario.js";
-import Modais from "./Modais.js";
+import Modais from "../../../utilitarios/Modais.js";
 import Pessoa from "./Pessoa.js";
 
 export default class Tabela2 {

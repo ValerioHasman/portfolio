@@ -1,8 +1,8 @@
+import Modais from '../../utilitarios/Modais.js';
 import APIs from './modelos/APIs.js';
 import Configuracoes from './modelos/Configuracoes.js';
 import FerramentaDica from './modelos/FerramentaDica.js';
 import Formulario from './modelos/Formulario.js';
-import Modais from './modelos/Modais.js';
 import Pessoa from './modelos/Pessoa.js';
 import Tabela2 from './modelos/Tabela2.js';
 

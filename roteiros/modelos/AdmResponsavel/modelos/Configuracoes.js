@@ -1,4 +1,4 @@
-import Modais from "./Modais.js";
+import Modais from "../../../utilitarios/Modais.js";
 
 export default class Configuracoes{
 
