@@ -3,7 +3,7 @@ export default function Portfolio(){
   const elemento = document.createElement('div');
   elemento.classList.add('container-xxl');
 
-  fetch('https://valeriohasman.github.io/portfolio/Porta-Fólio.html',{
+  fetch('./Porta-Fólio.html',{
     method: 'GET',
   }).then(resp => resp.text())
   .then((data) => {
