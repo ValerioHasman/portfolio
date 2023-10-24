@@ -12,7 +12,6 @@ export default function Portfolio(){
     for (const carousel of elemento.querySelectorAll('[data-bs-ride="carousel"]')) {
       bootstrap.Carousel.getOrCreateInstance(carousel);
     }
-    elemento.insertAdjacentHTML('beforeend', `<div class="py-5 my-4"></div>`);
   }).catch(err=>{
     console.error(err);
   });
