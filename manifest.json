@@ -5,10 +5,13 @@
   "display": "standalone",
   "background_color": "#446699",
   "theme_color": "#5577aa",
+  "description": "Um portfólio para demostrar minhas diversas habilidades com HTML, CSS e JS.",
+  "lang": "pt-BR",
   "icons": [
     {
       "src": "./imagens/ICONE.png",
-      "type": "image/png", "sizes": "512x512"
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ]
 }
