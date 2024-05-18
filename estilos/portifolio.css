@@ -2,12 +2,12 @@
 
 .altura {
   min-height: calc(100vh - 73px);
-  min-height: calc(100dvh - ( 48px + 1.325rem + 0.9dvw ) * (13 / 15));
+  min-height: calc(100lvh - ( 48px + 1.325rem + 0.9dvw ) * (13 / 15));
 }
 
 .alturaProjetos {
   min-height: calc( 100vh - 130px);
-  min-height: calc( 100dvh - 48px - ((1.3rem + 0.6vw) * 3));
+  min-height: calc( 100lvh - 48px - ((1.3rem + 0.6vw) * 3));
 }
 
 .balance * {
