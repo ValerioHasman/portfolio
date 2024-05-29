@@ -37,27 +37,6 @@ export default class BarraNavegacaoOff{
           <div class="navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-lg-1" href="#" role="button"
-                data-bs-toggle="dropdown" data-bs-auto-close="${dropdownAutoClose}" aria-expanded="false">
-                Endereços
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis"
-                    href="https://github.com/ValerioHasman/"><i class="bi me-2 bi-github"></i>GitHub</a></li>
-                <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" target="_blank"
-                    href="https://www.linkedin.com/in/valerio-hasman/">
-                    <div class="row justify-content-between">
-                      <div class="col-auto">
-                        <i class="bi me-2 bi-linkedin"></i>LinkdIn
-                      </div>
-                      <div class="col-auto">
-                        <i class="bi bi-box-arrow-up-right"></i>
-                      </div>
-                    </div>
-                  </a></li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-lg-1" href="#" role="button" data-bs-toggle="dropdown" data-bs-auto-close="${dropdownAutoClose}" aria-expanded="false">
                 <i class="bi me-2 bi-filetype-js"></i>Projetos
               </a>
