@@ -2,22 +2,11 @@ import Saudacao from "https://valeriohasman.github.io/TI/roteiro/uteis/Saudacao.
 
 export default function Portfolio(){
 
-  const elemento = document.createElement('div');
-  elemento.classList.add('container-xxl');
+  const elemento = document.querySelector(".container-xxl");
 
-  fetch('./index.html',{
-    method: 'GET',
-  }).then(resp => resp.text())
-  .then((data) => {
-    elemento.innerHTML = data;
-    elemento.innerHTML = elemento.querySelector(".container-xxl").innerHTML;
-    elemento.querySelector("#saudacao").textContent = `Olá, ${ Saudacao.saudar() }, sou o Valério`;
-    for (const carousel of elemento.querySelectorAll('[data-bs-ride="carousel"]')) {
-      bootstrap.Carousel.getOrCreateInstance(carousel);
-    }
-  }).catch(err=>{
-    console.error(err);
-  });
+  elemento.querySelector("a#envelopelink").href = `mailto:valerio.hasman@gmail.com?subject=Desenvolvedor&body=${ Saudacao.apresentarEmURI() }`
+  elemento.querySelector("a#whatsapplink").href = `https://wa.me/5512997329785?text=${ Saudacao.apresentarEmURI() }`
+  elemento.querySelector("#saudacao").textContent = `Olá, ${ Saudacao.saudar() }, sou o Valério`;
 
   return elemento;
 }
