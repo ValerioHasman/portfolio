@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfólio - Valério" />
+  <meta property="og:description" content="Meus projetos Client Side e Server Side." />
+  <meta property="og:image" content="https://valeriohasman.github.io/portfolio/imagens/ICONE.png" />
+  <meta property="og:image:width" content="512" />
+  <meta property="og:image:height" content="512" />
+  <meta property="og:image:alt" content="Pasta de projetos com símbolo de código" />
+  <meta property="og:url" content="https://valeriohasman.github.io/portfolio/portifolio.html" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Portfólio" />
+  <script src="./teste.js"></script>
+  <link rel="shortcut icon" href="./imagens/ICONE.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="estilos/portifolio.css" />
+  <link rel="manifest" href="./manifest.json" />
+  <script type="module" src="./roteiros/index.js"></script>
+  <title>Porta-fólio</title>
+</head>
+
+<body class="text-break">
+  <div class="imgbg">
+    <div></div>
+  </div>
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary py-1">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#Portfolio">
+        <img class="icone" src="https://icons.getbootstrap.com/assets/icons/journal-code.svg" alt="Porta-fólio"
+          width="30" height="24">
+        Porta-fólio
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+        aria-controls="offcanvasMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <div class="offcanvas-header">
+          <a class="navbar-brand" href="#Portfolio">
+            <img class="icone" src="https://icons.getbootstrap.com/assets/icons/journal-code.svg" alt="Porta-fólio"
+              width="30" height="24">
+            Porta-fólio
+          </a>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle bg-grad-nav rounded p-2 mx-lg-1" href="#" role="button"
+                  data-bs-toggle="dropdown" data-bs-auto-close="${dropdownAutoClose}" aria-expanded="false">
+                  <i class="bi me-2 bi-filetype-js"></i>Projetos
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#MenuDeContexto"><i
+                        class="bi me-2 bi-menu-button-wide"></i>Menu De Contexto</a></li>
+                  <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis"
+                      href="#TransicaoGradienteLinear"><i class="bi me-2 bi-palette2"></i>Transição de Gradiente
+                      Linear</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#AdmResponsavel"><i
+                        class="bi me-2 bi-people"></i>Adm Responsavel</a></li>
+                  <li><a class="dropdown-item bg-grad-nav rounded text-dark-emphasis" href="#ProcessamentoDeDados"><i
+                        class="bi me-2 bi-table"></i>Processamento De Dados</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="nav-item dropdown" id="tema">
+              <button class="btn btn-link bg-grad-nav nav-link p-2 dropdown-toggle mx-lg-1" type="button"
+                data-bs-toggle="dropdown" data-bs-auto-close="${dropdownAutoClose}" aria-expanded="false">
+                <i class="bi me-2 bi-moon-stars-fill"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-lg-end">
+                <li><button data-bs-theme-value="light" class="dropdown-item bg-grad-nav" type="button"><i
+                      class="bi me-2 bi-sun-fill"></i>Light</button></li>
+                <li><button data-bs-theme-value="dark" class="dropdown-item bg-grad-nav" type="button"><i
+                      class="bi me-2 bi-moon-stars-fill"></i>Dark</button></li>
+                <li><button data-bs-theme-value="auto" class="dropdown-item bg-grad-nav" type="button"><i
+                      class="bi me-2 bi-circle-half"></i>Auto</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div id="root">
+    <div class="container-xxl">
+      <a href="#" class="portaFolio"></a>
+      <div class="altura d-flex align-items-center">
+        <div class="row align-items-center">
+          <div class="col-12 col-md-9 col-lg-8 balance">
+            <h1 id="saudacao">Olá, sou o Valério</h1>
+            <h2 class="py-5">Desenvolvedor <span lang="en" class="fst-italic">Full Stack</span></h2>
+            <p>Formado em Análise e Desenvolvimento Sistemas e Técnico em
+              Informática.</p>
+            <p>A área da tecnologia foi a que mais me chamou a atenção e pretendo seguir carreira como programador.</p>
+          </div>
+          <div class="col-12 col-md-3 col-lg-4">
+            <div class="container-fluid">
+              <div class="fs-1 row text-center">
+                <a class="col col-md-12 col-lg-5 m-1 rounded-4 bg-links" href="https://github.com/ValerioHasman/"
+                  aria-label="GitHub" target="_blank">
+                  <i class="bi align-middle bi-github"></i>
+                </a>
+                <a class="col col-md-12 col-lg-5 m-1 rounded-4 bg-links" aria-label="LinkedIn"
+                  href="https://www.linkedin.com/in/valerio-hasman/" target="_blank">
+                  <i class="bi align-middle bi-linkedin"></i>
+                </a>
+                <a class="col col-md-12 col-lg-5 m-1 rounded-4 bg-links"
+                  href="mailto:valerio.hasman@gmail.com?subject=Dev&body=Ol%C3%A1%2C%20Val%C3%A9rio%0D%0AVim%20atrav%C3%A9s%20do%20Portf%C3%B3lio%0D%0A"
+                  aria-label="Gmail" target="_blank">
+                  <i class="bi align-middle bi-envelope"></i>
+                </a>
+                <a class="col col-md-12 col-lg-5 m-1 rounded-4 bg-links" href="tel:+5512997329785" aria-label="Celular"
+                  target="_blank">
+                  <i class="bi align-middle bi-telephone"></i>
+                </a>
+                <a class="col col-md-12 col-lg-5 m-1 rounded-4 bg-links"
+                  href="https://wa.me/5512997329785?text=Ol%C3%A1%2C%20Val%C3%A9rio%0A" aria-label="WhatsApp"
+                  target="_blank">
+                  <i class="bi align-middle bi-whatsapp"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="mb-5">Projetos</h2>
+        <div class="container-xxl alturaProjetos d-flex align-items-start">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>GyroBall</h3>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance text-end">
+              <p>GyroBall <img src="https://valeriohasman.github.io/GyroBall/icones/GyroBallAR.png" alt=""
+                  class="emojiIco" />. Desenvolvido em JS, JSDoc, indexedDB, CSS, Bootstrep e HTML para
+                o lado do cliente, usando uma estrutura SPA com PWA. O app destina-se a pessoas que desejam monitorar o
+                seu pulso, aderência e força do braço.</p>
+              <p>O projeto foi desenvolvido e entregue para um cliente real.</p>
+              <a href="https://valeriohasman.github.io/GyroBall/" target="_blank" rel="modulepreload"><i
+                  class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div class="col-md-7 col-12 p-2">
+              <div id="carouselZero" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner rounded-3 border border-secondary-subtle">
+                  <div class="carousel-item active">
+                    <img src="./imagens/gyro.png" class="d-block w-100" alt="GyroBall">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/gyro2.png" class="d-block w-100" alt="GyroBall">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/gyro3.png" class="d-block w-100" alt="GyroBall">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-xxl alturaProjetos d-flex align-items-start">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>Gerenciador</h3>
+            </div>
+            <div class="col-md-7 col-12 p-2">
+              <div id="carouselUm" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
+                <div class="carousel-inner rounded-3 border border-secondary-subtle">
+                  <div class="carousel-item active">
+                    <img src="./imagens/gerenciador0.png" class="d-block w-100" alt="Gerenciador">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/gerenciador1.png" class="d-block w-100" alt="Gerenciador">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/gerenciador2.png" class="d-block w-100" alt="Gerenciador">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/gerenciador3.png" class="d-block w-100" alt="Gerenciador">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance">
+              <p>Gerenciador <img
+                  src="https://raw.githubusercontent.com/ValerioHasman/Gerenciador/main/midias/ICONE.ico" alt=""
+                  class="emojiIco" /> é um projeto PHP com MySql do lado servidor e JS, CSS, Bootstrep e HTML para
+                o lado do cliente, usando uma estrutura MVC <span lang="en"
+                  class="fst-italic">(Model–view–controller)</span>, Tendo sido um teste (prova) para LiaX Tecnologia da
+                Informação de Lorena/SP.</p>
+              <p>O projeto tem ideia de de auxiliar na gestão da imunização do nosso país, considerando a esfera
+                nacional.
+              </p>
+              <a href="https://github.com/ValerioHasman/Gerenciador" target="_blank" rel="modulepreload"><i
+                  class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-xxl alturaProjetos d-flex align-items-start">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>SIB</h3>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance text-end">
+              <p>SIB <img src="https://raw.githubusercontent.com/ValerioHasman/SIB/main/midias/ICONE.ico" alt=""
+                  class="emojiIco" /> é um projeto PHP com MySql do lado servidor e JS, DataTable, CSS, Bootstrep e HTML
+                para o lado do cliente, usando uma estrutura MVC <span lang="en"
+                  class="fst-italic">(Model–view–controller)</span>, Tendo sido um teste (prova) para Central dos
+                Benefícios de Nova Lima/MG</p>
+              <p>O projeto consiste em gerenciar usuários de um sistema</p>
+              <a href="https://github.com/ValerioHasman/SIB" target="_blank" rel="modulepreload"><i
+                  class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div class="col-md-7 col-12 p-2">
+              <div id="carouselDois" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
+                <div class="carousel-inner rounded-3 border border-secondary-subtle">
+                  <div class="carousel-item active">
+                    <img src="./imagens/sib0.png" class="d-block w-100" alt="SIB">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/sib1.png" class="d-block w-100" alt="SIB">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/sib2.png" class="d-block w-100" alt="SIB">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container-xxl alturaProjetos d-flex align-items-start">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>Costs</h3>
+            </div>
+            <div class="col-md-7 col-12 p-2">
+              <div id="carouselTres" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-touch="false">
+                <div class="carousel-inner rounded-3 border border-secondary-subtle">
+                  <div class="carousel-item active">
+                    <img src="./imagens/costs0.png" class="d-block w-100" alt="SIB">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/costs1.png" class="d-block w-100" alt="SIB">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/costs2.png" class="d-block w-100" alt="SIB">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance">
+              <p>Costs <img src="https://raw.githubusercontent.com/ValerioHasman/costsReact/main/src/img/logoreact.png"
+                  alt="" class="emojiIco" /> é um projeto em React.js usando componentes para sua construção,
+                proveniente
+                de um curso on-line.</p>
+              <p>Um projeto que gerencia projetos e seus custos.</p>
+              <a href="https://github.com/ValerioHasman/costsReact" target="_blank" rel="modulepreload"><i
+                  class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="container-xxl alturaProjetos d-flex align-items-start">
+          <div class="row justify-content-between">
+            <div class="col-12">
+              <h3>Afazeres</h3>
+            </div>
+            <div class="col-md-5 col-12 p-2 balance text-end">
+              <p>Afazeres <img src="https://raw.githubusercontent.com/ValerioHasman/Afazeres/main/src/logo.svg" alt=""
+                  class="emojiIco" /> é um projeto em React.js usando componentes para sua construção, proveniente de um
+                curso on-line.</p>
+              <p>Projeto para anotar tarefas a serem cumpridas, marcando o que já foi feito e o que falta ser feito</p>
+              <a href="https://github.com/ValerioHasman/Afazeres" target="_blank" rel="modulepreload"><i
+                  class="bi bi-box-arrow-up-right"></i></a>
+            </div>
+            <div class="col-md-7 col-12 p-2">
+              <div id="carouselQuatro" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-touch="false">
+                <div class="carousel-inner rounded-3 border border-secondary-subtle">
+                  <div class="carousel-item active">
+                    <img src="./imagens/afazeres0.png" class="d-block w-100" alt="SIB">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./imagens/afazeres1.png" class="d-block w-100" alt="SIB">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

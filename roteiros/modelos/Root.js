@@ -13,11 +13,6 @@ export default class Root {
 
     if (alvo instanceof BarraNavegacao) {
 
-      if(Root.#raiz.querySelector('#rootnav') === null){
-        Root.#raiz.innerHTML = '';
-      }
-
-      Root.#raiz.appendChild(alvo.barra);
       alvo.rootnav.innerHTML = '';
       alvo.rootnav.appendChild(valor);
 
@@ -36,9 +31,6 @@ export default class Root {
         alvo.innerHTML = String(valor);
       }
 
-    } else {
-
     }
-
   }
 }
