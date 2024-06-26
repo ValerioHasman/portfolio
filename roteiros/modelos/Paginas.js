@@ -2,9 +2,9 @@ import Portfolio from "./Portfolio.js";
 import MenuDeContexto from "./MenuDeContexto.js";
 import TransicaoGradienteLinear from "./TransicaoGradienteLinear.js";
 import AdmResponsavel from "./AdmResponsavel.js";
-import BarraNavegacao from "./BarraNavegacaoOff.js";
 import ProcessamentoDeDados from "./ProcessamentoDeDados.js";
 import Root from "./Root.js";
+import BarraNavegacaoOff from "./BarraNavegacaoOff.js";
 
 export default class Paginas {
   #Portfolio = Portfolio();
@@ -12,16 +12,19 @@ export default class Paginas {
   #TransicaoGradienteLinear = TransicaoGradienteLinear();
   #AdmResponsavel = AdmResponsavel();
   #ProcessamentoDeDados = ProcessamentoDeDados();
-  #BarraNavegacao = new BarraNavegacao();
+
+  constructor(){
+    BarraNavegacaoOff();
+  }
 
   Portfolio() {
-    Root.domNode(this.#Portfolio, this.#BarraNavegacao);
+    Root.domNode(this.#Portfolio);
   }
   MenuDeContexto() {
-    Root.domNode(this.#MenuDeContexto, this.#BarraNavegacao);
+    Root.domNode(this.#MenuDeContexto);
   }
   TransicaoGradienteLinear() {
-    Root.domNode(this.#TransicaoGradienteLinear, this.#BarraNavegacao);
+    Root.domNode(this.#TransicaoGradienteLinear);
   }
   AdmResponsavel() {
     Root.domNode(this.#AdmResponsavel);

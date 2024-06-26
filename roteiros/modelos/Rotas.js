@@ -1,17 +1,15 @@
+import subirNaPagina from "../utilitarios/subirNaPagina.js";
 import Paginas from "./Paginas.js";
 
-export default class Rotas{
+export default class Rotas {
 
   #pagina = new Paginas();
 
-  irParaUrl(url){
-
-    let destino = url.split('#')[1];
-
-    if(this.#pagina[destino] === undefined){
-      this.#pagina['Portfolio']();
-    } else {
-      this.#pagina[destino]();
-    }
+  irParaUrl(url) {
+    try {
+      let caminho = url.split('#')[1].split('/')[0];
+      this.#pagina[caminho]();
+      subirNaPagina();
+    } catch (error) { }
   }
 }

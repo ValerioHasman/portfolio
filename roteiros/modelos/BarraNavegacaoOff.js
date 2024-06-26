@@ -1,35 +1,18 @@
 import Temas from "./Temas.js";
 
-export default class BarraNavegacaoOff{
+export default function BarraNavegacaoOff() {
+
+  let barra = document.querySelector('nav');
   
-  #barra;
-  #rootnav;
+  const bsOffcanvas = new bootstrap.Offcanvas(
+    barra.querySelector('#offcanvasMenu')
+  )
 
-  constructor(){
+  window.addEventListener('hashchange', ()=>{
+    setTimeout(() => {
+      bsOffcanvas.hide();
+    }, 1);
+  });
 
-    this.#barra = document.querySelector('nav');
-
-    const bsOffcanvas = new bootstrap.Offcanvas(
-      this.#barra.querySelector('#offcanvasMenu')
-    )
-
-    window.addEventListener('hashchange', ()=>{
-      setTimeout(() => {
-        bsOffcanvas.hide();
-      }, 1);
-    });
-
-    this.#rootnav = document.querySelector('#root');
-
-    Temas(this.#barra);
-  }
-  
-  get rootnav(){
-    return this.#rootnav;
-  }
-
-  get barra(){
-    return this.#barra;
-  }
-
+  Temas(barra);
 }
