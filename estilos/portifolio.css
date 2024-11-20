@@ -2,12 +2,12 @@
 
 .altura {
   min-height: calc(100vh - 73px);
-  min-height: calc(100svh - ( 48px * 2 ));
+  min-height: calc(100svh - (48px * 2));
 }
 
 .alturaProjetos {
-  min-height: calc( 100vh - 130px);
-  min-height: calc( 100lvh - 48px - ((1.3rem + 0.6vw) * 3));
+  min-height: calc(100vh - 130px);
+  min-height: calc(100lvh - 48px - ((1.3rem + 0.6vw) * 3));
 }
 
 .balance * {
@@ -92,7 +92,7 @@
   scroll-margin-top: 1rem;
 }
 
-.para-top{
+.para-top {
   width: 3em;
   height: 3em;
   border-radius: 50%;
@@ -104,7 +104,26 @@
   margin-right: 1em;
 }
 
-.para-top:active{
+.para-top:active {
   transition: none;
   background-color: var(--bg-links-active) !important;
+}
+
+body {
+  transition: color var(--amanhecer);
+}
+
+.bg-body-tertiary {
+  transition: background-color var(--amanhecer);
+}
+
+.nav-link{
+  transition: color var(--amanhecer), background-color var(--amanhecer), border-color .15s ease-in-out;
+} 
+
+.navbar-brand {
+  transition: color var(--amanhecer);
+}
+.offcanvas {
+  transition: background-color var(--amanhecer), var(--bs-offcanvas-transition);
 }
